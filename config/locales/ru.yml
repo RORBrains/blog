@@ -1,0 +1,12 @@
+ru:
+  hello: "Привет"
+  activerecord:
+    models:
+      user: "Пользователь"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Имя не должно быть пустым!"
+              too_short: "Имя должно быть не менее 2 символов"
