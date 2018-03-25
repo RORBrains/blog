@@ -29,11 +29,13 @@ end
 posts = Post.create!(hash_posts)
 
 # Comments
-hash_comments = 200.times.map do
+hash_comments = 300.times.map do
+  commentable = [users, posts].sample.sample
   {
     body: FFaker::HipsterIpsum.paragraph,
-    post: posts.sample,
-    user: creators.sample
+    user: creators.sample,
+    commentable_id: commentable.id,
+    commentable_type: commentable.class.to_s
   }
 end
 Comment.create!(hash_comments)
