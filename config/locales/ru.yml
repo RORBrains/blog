@@ -3,6 +3,12 @@ ru:
   activerecord:
     models:
       user: "Пользователь"
+    attributes:
+      user:
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        email: Email
+        name: Имя пользователя
     errors:
       models:
         user:
@@ -10,3 +16,8 @@ ru:
             name:
               blank: "Имя не должно быть пустым!"
               too_short: "Имя должно быть не менее 2 символов"
+  label:
+    log_out: "Выйти"
+    log_in: "Войти"
+    register: "Зарегестрироваться"
+    hello: "Привет"
