@@ -1,2 +1,5 @@
 h1 Welcome To My Blog
-p Hi there! You've visited this page #{session[:visits]} times!
+p.alert.alert-primary Hi there! You've visited this page #{session[:visits]} times!
+
+= render "components/page/page" do
+  p Hello from the page component!

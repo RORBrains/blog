@@ -3,7 +3,7 @@ Post.destroy_all
 User.destroy_all
 
 def random_name
-  "#{FFaker::Internet.user_name}#{Time.new.to_i}"[0..16]
+  "#{FFaker::Internet.user_name}#{Time.new.to_i}"[0..15]
 end
 
 # Users
@@ -14,7 +14,11 @@ hash_users = 10.times.map do
     password: "password"
   }
 end
-users = User.create!(hash_users)
+begin
+  users = User.create!(hash_users)
+rescue
+  binding.pry
+end
 users.first(7).each { |u| u.update(creator: true) }
 users.first(2).each { |u| u.update(moderator: true) }
 
