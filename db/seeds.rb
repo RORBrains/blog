@@ -14,11 +14,7 @@ hash_users = 10.times.map do
     password: "password"
   }
 end
-begin
-  users = User.create!(hash_users)
-rescue
-  binding.pry
-end
+users = User.create!(hash_users)
 users.first(7).each { |u| u.update(creator: true) }
 users.first(2).each { |u| u.update(moderator: true) }
 

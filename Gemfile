@@ -35,11 +35,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
+gem 'ffaker', '~> 2.8', '>= 2.8.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry-byebug', '~> 3.6'
-  gem 'ffaker', '~> 2.8', '>= 2.8.1'
+  # gem 'pry-byebug', '~> 3.6'
+  gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :development do
