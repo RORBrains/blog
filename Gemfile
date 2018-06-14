@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+#gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -47,6 +47,9 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'letter_opener_web', '~> 1.0'
+  gem 'capistrano', '~> 3.11'
+  gem "capistrano-rails", "~> 1.3", require: false
+  gem 'capistrano-rvm', '~> 0.1.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
